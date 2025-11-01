@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Petrus — Tecnologia a serviço de pessoas</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN + Configuração inline -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#0e1a44',
+            'primary-light': '#97ebfd',
+            'neutral-gray': '#4d585c',
+            'green-light': '#ddfea3',
+            'bg-1': '#effdfd',
+            'bg-2': '#f3f8f7',
+            'line-gray': '#EBEBEB'
+          },
+          fontFamily: {
+            'heading': ['Kanit', 'sans-serif'],
+            'body': ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { --max-width: 1100px; }
+    body { font-family: Poppins, sans-serif; }
+    .card-shadow { box-shadow: 0 6px 20px rgba(14,26,68,0.06); }
+    .cta { background-color: #0e1a44; color: #fff; }
+    .cta:hover { background-color: #4d585c; color: #fff; }
+    .container-max { max-width: var(--max-width); margin-left: auto; margin-right: auto; padding: 0 1rem; }
+
+    /* Animações suaves */
+    @keyframes fade-in { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes slide-up { 0% { transform: translateY(20px); opacity: 0;} 100% { transform: translateY(0); opacity: 1;} }
+    .animate-fade-in { animation: fade-in 0.8s ease-in-out both; }
+    .animate-slide-up > div { animation: slide-up 0.6s ease-in-out both; }
+    .animate-slide-up > div:nth-child(1) { animation-delay: 0.1s; }
+    .animate-slide-up > div:nth-child(2) { animation-delay: 0.2s; }
+    .animate-slide-up > div:nth-child(3) { animation-delay: 0.3s; }
+    .animate-slide-up > div:nth-child(4) { animation-delay: 0.4s; }
+    .animate-slide-up > div:nth-child(5) { animation-delay: 0.5s; }
+    .animate-slide-up > div:nth-child(6) { animation-delay: 0.6s; }
+    .animate-slide-up > div:nth-child(7) { animation-delay: 0.7s; }
+    .animate-slide-up > div:nth-child(8) { animation-delay: 0.8s; }
+  </style>
+</head>
+<body class="bg-bg-1 text-neutral-800 antialiased">
+
+  <header class="bg-transparent py-6">
+    <div class="container-max flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Petrus logo" class="w-16 h-16 object-contain">
+        <div class="hidden md:block">
+          <h1 class="text-2xl font-heading text-primary-dark">Petrus</h1>
+          <p class="text-sm text-neutral-gray -mt-1">Tecnologia a serviço de pessoas</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-gray">
+        <a href="#" class="hover:text-primary-dark">Home</a>
+        <a href="#produtos" class="hover:text-primary-dark">Produtos / Serviços</a>
+        <a href="#institucional" class="hover:text-primary-dark">Institucional</a>
+        <a href="#contato" class="hover:text-primary-dark">Contato</a>
+      </nav>
+      <div class="hidden md:block">
+        <a href="#contato" class="px-4 py-2 rounded-md cta text-sm font-semibold">Fale conosco</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pt-8 pb-12">
+    <div class="container-max grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-heading leading-tight text-primary-dark">
+          Tecnologia <span class="block">a serviço de</span> 
+          <span class="block text-5xl md:text-6xl">pessoas 
+          <span style="display:inline-block;width:22px;height:22px;background:#97ebfd;margin-left:8px;border-radius:3px;"></span></span>
+        </h2>
+        <p class="mt-6 text-lg text-neutral-gray max-w-xl">
+          Soluções White Label em pagamentos, fintech, cripto, streaming e iGaming — arquitetura escalável, segurança e customização para sua marca.
+        </p>
+      </div>
+
+      <!-- Visual stripes -->
+      <div class="hidden md:flex justify-center">
+        <div class="w-full max-w-md bg-white rounded-xl p-8 card-shadow relative overflow-hidden animate-fade-in">
+          <div class="absolute inset-0 bg-gradient-to-br from-bg-1 via-white to-bg-2 opacity-70"></div>
+          <div class="relative space-y-3 animate-slide-up">
+            <div class="h-6 bg-primary-dark rounded-md"></div>
+            <div class="h-4 bg-neutral-gray rounded-md w-2/3"></div>
+            <div class="h-6 bg-primary-dark rounded-md w-4/5"></div>
+            <div class="h-6 bg-primary-light rounded-md w-full"></div>
+            <div class="h-6 bg-primary-dark rounded-md w-3/4"></div>
+            <div class="h-4 bg-neutral-gray rounded-md w-1/2"></div>
+            <div class="h-6 bg-primary-light rounded-md w-5/6"></div>
+            <div class="h-4 bg-neutral-gray rounded-md w-1/3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Produtos / Serviços -->
+  <section id="produtos" class="py-12 bg-bg-2">
+    <div class="container-max">
+      <h3 class="text-3xl font-heading text-primary-dark text-center">Produtos e Serviços</h3>
+      <p class="text-center text-neutral-gray mt-3 max-w-2xl mx-auto">Soluções White Label e plataformas completas para pagamentos, cripto, streaming, fintech e muito mais.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card template: duplicar para cada produto -->
+        <!-- 1. Petrus Gateway -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Gateway</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Processamento de pagamentos completo e personalizável com painel intuitivo e ampla aceitação (cartões, PIX, boletos, wallets).</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Integração com múltiplos meios de pagamento</li>
+            <li>• Painel em tempo real</li>
+            <li>• White Label</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 2. Petrus Corretora de Cripto -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Corretora de Cripto</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Plataforma White Label para lançar exchanges com engine de trading, KYC/AML e gestão completa.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-dark"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Engine de alta performance</li>
+            <li>• Conformidade regulatória</li>
+            <li>• Painel administrativo personalizável</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 3. Petrus Ticketeria -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Ticketeria</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Sistema de venda de ingressos e gestão de eventos com checkout otimizado e controle de acesso via QR Code.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-green-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Checkout otimizado</li>
+            <li>• QR Code dinâmico</li>
+            <li>• Relatórios automatizados</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 4. Petrus OTT -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus OTT</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Plataforma White Label de streaming com gerenciamento de planos, assinaturas e checkout integrado.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Player responsivo</li>
+            <li>• Gestão de assinaturas</li>
+            <li>• Checkout integrado</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 5. Petrus Checkout e Gateway -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Checkout e Gateway</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Checkout otimizado + processamento seguro para reduzir fricções e aumentar conversões.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-dark"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Interface otimizada para conversão</li>
+            <li>• Integração antifraude</li>
+            <li>• Personalização completa</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 6. Petrus Fintech -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Fintech</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Plataforma para criar contas, pagamentos e gestão financeira com APIs abertas e segurança.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Infraestrutura escalável</li>
+            <li>• APIs abertas</li>
+            <li>• Customização total</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 7. Petrus Fintech de Crédito -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Fintech de Crédito</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Solução para gestão de crédito: simulação, análise de risco e automação do ciclo de empréstimos.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-green-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Motor de crédito adaptável</li>
+            <li>• Análise automatizada de risco</li>
+            <li>• Relatórios em tempo real</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 8. Petrus Chatbot com IA -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Chatbot com IA</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Assistente virtual generativo, treinável com dados da empresa e integrável a WhatsApp, site e apps.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-dark"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Treinamento com seus dados</li>
+            <li>• Integração omnicanal</li>
+            <li>• Comunicação personalizada</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+        <!-- 9. Petrus Whitelabel Bet -->
+        <article class="bg-white p-6 rounded-lg card-shadow">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="text-xl font-heading text-primary-dark">Petrus Whitelabel Bet</h4>
+              <p class="mt-2 text-sm text-neutral-gray">Plataforma de iGaming e apostas White Label com motor de apostas, odds dinâmicas e compliance.</p>
+            </div>
+            <div class="ml-4 flex-shrink-0">
+              <div class="w-12 h-12 rounded-md bg-primary-light"></div>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-neutral-gray space-y-1">
+            <li>• Motor para pré-jogo e ao vivo</li>
+            <li>• Gestão de odds e afiliados</li>
+            <li>• Ferramentas de CRM e análise</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="inline-block px-4 py-2 rounded-md text-sm font-semibold border border-line-gray">Saiba mais</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Institucional (preview) -->
+  <section id="institucional" class="py-12">
+    <div class="container-max text-center">
+      <h3 class="text-2xl font-heading text-primary-dark">Institucional</h3>
+      <p class="mt-3 text-neutral-gray max-w-2xl mx-auto">Sobre nós, missão & valores, equipe e oportunidades de carreira — conte a história da sua empresa e atraia talentos.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-12 bg-bg-2">
+    <div class="container-max grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-heading text-primary-dark">Fale com a Petrus</h3>
+        <p class="mt-2 text-neutral-gray">Preencha o formulário ou entre em contato direto conosco.</p>
+
+        <ul class="mt-4 text-neutral-gray">
+          <li>Telefone: <strong>(11) 91205-9030</strong></li>
+          <li>Email: <strong>contato@petrus-software.com</strong></li>
+          <li>Endereço: <strong>Av. Trindade, 254</strong></li>
+        </ul>
+      </div>
+
+      <form class="bg-white p-6 rounded-lg card-shadow">
+        <label class="block text-sm mb-2 text-neutral-gray">Nome</label>
+        <input class="w-full border border-line-gray rounded-md px-3 py-2 mb-3" placeholder="Seu nome" />
+        <label class="block text-sm mb-2 text-neutral-gray">Email</label>
+        <input class="w-full border border-line-gray rounded-md px-3 py-2 mb-3" placeholder="seu@exemplo.com" />
+        <label class="block text-sm mb-2 text-neutral-gray">Mensagem</label>
+        <textarea class="w-full border border-line-gray rounded-md px-3 py-2 mb-3" rows="4" placeholder="Como podemos ajudar?"></textarea>
+        <button type="submit" class="px-4 py-2 rounded-md cta">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8">
+    <div class="container-max flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-neutral-gray text-sm">&copy; <span id="year"></span> Petrus. Todos os direitos reservados.</div>
+      <div class="text-neutral-gray text-sm">Desenvolvido com foco em produtos White Label</div>
+    </div>
+  </footer>
+
+  <script>
+    // small interactivity: set year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // mobile menu (simples toggle)
+    const btn = document.getElementById('btn-mobile');
+    btn && btn.addEventListener('click', () => {
+      alert('Menu mobile simples — podemos adicionar overlay e links, se quiser.');
+    });
+  </script>
+</body>
+</html>
